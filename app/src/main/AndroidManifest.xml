@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.browserstack.callblocker">
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-<!--    <uses-permission android:name="android.permission.BIND_CALL_REDIRECTION_SERVICE"-->
+<!--    <uses-permission android:name="android.permission.BIND_CALL_REDIRECTION_SERVICE"/>-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver
+
+<!--        <service-->
+<!--            android:name=".MyCallRedirectionService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true"-->
+<!--            android:permission="android.permission.BIND_CALL_REDIRECTION_SERVICE">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.telecom.CallRedirectionService" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+                <receiver
             android:name=".BlockOutgoing"
             android:label="@string/app_name"
             android:exported="true">
